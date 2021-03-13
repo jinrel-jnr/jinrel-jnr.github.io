@@ -19,8 +19,5 @@
 
 .blockOpen {
   display: none;
-}
-
-.blockClose {
-  display: block;
+  visibility: hidden;
 }

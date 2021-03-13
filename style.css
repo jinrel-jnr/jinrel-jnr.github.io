@@ -3,3 +3,24 @@
 * {
   padding: 10px 5px;
 }
+
+.card-header-title {
+  display: block;
+  font-size: 22px;
+  text-align: center;
+  color: hsl(217, 71%, 45%);
+  cursor: pointer;
+}
+
+.card-header-title:hover {
+  background-color: hsl(217, 71%, 45%);
+  color: white;
+}
+
+.blockOpen {
+  display: none;
+}
+
+.blockClose {
+  display: block;
+}

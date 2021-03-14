@@ -59,6 +59,16 @@ img {
 }
 .salmonTheme {
   background-color: salmon;
+  font-weight: 600;
+  font-size: 22px;
+}
+.salmonTheme a {
+  color: white;
+  font-size: 16px;
+}
+.salmonTheme a:hover {
+  color: white;
+  font-style: italic;
 }
 .yellowTheme {
   background-color: rgb(185, 185, 11);

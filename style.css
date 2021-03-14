@@ -19,5 +19,13 @@
 
 .blockOpen {
   display: none;
-  visibility: hidden;
+}
+
+#cardSubMenu {
+  color: hsl(217, 71%, 45%);
+  font-family: sans-serif;
+}
+#cardSubMenu:hover {
+  color: hsl(218, 74%, 17%);
+  font-family: sans-serif;
 }

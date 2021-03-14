@@ -102,11 +102,52 @@
         <a href="https://toptal.com/designers/htmlarrows/symbols/" target="_blank">icônes en HTML</a>
       </div>
       <div>
-        <h6>Titre - H6</h6>
+        <h6>Video - Titre H6</h6>
+        <video src="video.mp4" autoplay loop muted></video>
       </div>
     </section>
-  </body>
-  <footer>
+    <br>
 
-  </footer>
+<!-- Formulaire -->
+
+    <section>
+        <h2>Formulaire</h2>
+        <form action="" method="">
+        <label for="name">Nom </label>      
+        <input id="name" type="text" placeholder="Entrez votre nom"><br>
+        <label for="age">Age</label>
+        <input id="age" type="number" min="0" max="99" step="1" value="18" placeholder="Saisissez un nombre"><br>
+
+        <!-- Input select -->
+        <label for="gender">Genre</label>
+        <select id="gender">
+            <option value="homme">Homme</option>
+            <option selected value="femme">Femme</option>
+        </select><br>
+        <!-- Input radio -->
+        <div>
+            <input type="radio" name="type" checked id="human">
+            <label for="human">Humain</label>
+            <input type="radio" name="type" id="dog">
+            <label for="dog">Chien</label>
+            <input type="radio" name="type" id="cat">
+            <label for="cat">Chat</label>
+        </div>
+
+        <textarea cols="30" rows="10" placeholder="Saisir ici un blabla"></textarea><br>
+
+        <!-- Input Checkbox -->
+        <label><input type="checkbox">Accepter les CGV</label>
+        <br>
+        <input type="submit" value="Valider">
+        </form>
+    </section>
+
+    <!-- Mails et envoi de fichiers -->
+
+    <footer>
+        <a href="mailto:test@test.com">Ecrivez pas ! C'est un fake</a><br>
+        <a href="notice.txt" download="nom-du-fichier">Télécharger la notice</a>
+    </footer>
+  </body>
 </html>

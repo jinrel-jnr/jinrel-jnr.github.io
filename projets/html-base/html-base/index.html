@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bases html</title>
+    <link
+      rel="shortcut icon"
+      href="/jinrel-jnr.github.io/ressources/imgs/logo html.png"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+      <header>
+            <h1>Squelette html - <em>Balade</em></h1>
+            <h2><span>&#9758;</span> Mise à jour le <time datetime="2021-03-14 18:11:04">14 mars 2021</time></h2>
+            <p>Pas de CSS ! Désolé ça pique un peu... <br><br>Une exception : le tableau parce que... hum.. je pouvais vraiment pas.<br><br> L'idée reste de poser une structure HTML. Parce qu'un bon rappel fait toujours du bien :).
+                <p><em>Rappel Em pour italique, </em><strong>Strong pour gras. </strong
+              ><span>/!\ L'élément en span ne revient pas à la ligne :</span>/!\ 
+             <p>^. Saut de ligne suite à balise <em>p</em>. saut de ligne pour <em>div</em> ici -> <div> <pre> Balise garde le pre formatage du texte. Utile pour aficher du code ^^. Exemple :
+                 <code>const newCode = () =>{
+                        console.log("Ca va s'afficher à l'appel de cette fonction newCode")
+             }"</code ></div> 
+                 Avec l'appel de cette fonction : <samp>newCode();</samp><br> Ce code va afficher --> <samp>Ca va s'afficher à l'appel de cette fonction newCode</samp></pre></p>
+            </p></p></div>
+      </header>
+
+    <section>
+      <div>
+        <h2>Photo - Titre H2</h2>
+        <img src="https://picsum.photos/600/400" alt="image aleatoire du site picsum">
+      </div>
+      <div>
+        <h3>Listes - Titre H3</h3>
+        <ul>
+            <li>UL = unordered list | Balise var et sup pour le facteur : <var>x<sup>2</sup></var>+5</li>
+            <li>UL = unordered listt | Balise var en informatique : <var>let item = "chaussure";</var>
+            <ol type="a">
+                <li>Sous-élément 1 avec insertion ul ou ol au choix.</li>
+                <li>Sous-élément 2 avec insertion ul ou ol au choix.</li>
+                
+            </ol>
+            </li>
+            <li>UL = unordered list</li>
+        </ul>
+        <ol type="I">
+            <li>OL = Ordered list avec un type "I"</li>
+            <li>OL = Ordered list</li>
+            <li>OL = Ordered list</li>
+            <li>OL = Ordered list</li>
+        </ol>
+      </div>
+      <div>
+        <h4>Tableaux - Titre H4</h4>
+        <table border="1" width="70%">
+            <!-- Légende -->
+            <caption><em>Mon parcours de santé </em></caption>
+            <!-- entête -->
+            <thead>
+                <tr>
+                    <th id="objectifs" rowspan="2">Objectifs</th>
+                    <th id="description" rowspan="2">Description</th>
+                    <th id="etat" colspan="3">Etat</th>
+                </tr>
+                <tr>               
+                    <td>Fait</td>
+                    <td>A faire</td>
+                    <td>En cours</td>
+                </tr>
+            </thead>
+            <!-- Corps du tableau -->
+            <tbody>
+                <tr>
+                    <th headers="objectifs">bases HTML</th>
+                    <td headers="description">mise en place d'une structure pour poser les bases de l'HTML</td>
+                    <td headers="etat" colspan="3">Fait</td>
+                </tr>
+                <tr>
+                    <th headers="objectifs">bases CSS</th>
+                    <td headers="description">mise en place des bases du CSS</td>
+                    <td headers="etat" colspan="3">A faire</td>
+                </tr>
+                <tr>
+                    <th headers="objectifs">bases Javascript</th>
+                    <td headers="description">mise en place de manipulations du DOM, gestion des données et utilisation d'une API</td>
+                    <td headers="etat" colspan="3">Fait</td>
+                </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                 <td colspan="6">A Suivre</td>
+            </tr>
+            </tfoot>
+        </table>
+      </div>
+      <div>
+        <h5>Liens - Titre H5</h5>
+        <a href="https://htmlcheatsheet.com/" target="_blank">HTML Cheat Sheet</a>
+        <br>
+        <a href="https://toptal.com/designers/htmlarrows/symbols/" target="_blank">icônes en HTML</a>
+      </div>
+      <div>
+        <h6>Titre - H6</h6>
+      </div>
+    </section>
+  </body>
+  <footer>
+
+  </footer>
+</html>

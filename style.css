@@ -16,6 +16,10 @@
   background-color: hsl(217, 71%, 45%);
   color: white;
 }
+.card-header-title-active {
+  background-color: hsl(217, 71%, 45%);
+  color: white;
+}
 
 .blockOpen {
   display: none;

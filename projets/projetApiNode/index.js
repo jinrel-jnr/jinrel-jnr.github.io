@@ -1,5 +1,4 @@
 // La constante express contient le framework Express.
-const bodyParser = require("body-parser");
 const express = require("express");
 
 // app "devient" express
@@ -11,9 +10,19 @@ require("./models/dbConfig");
 // Appel du routeur
 const postsRoutes = require("./routes/postsController");
 
-// Midlewarne : fonction qui va ecouter tout les changements sur les requetes/reponses
+const bodyParser = require("body-parser");
+// bodyParser deprecated. Mise à jour pour MongoDB
+const mongoose = require("mongoose");
+
+// Appel de CORS pour autoriser l'accès à l'API
+const cors = require("cors");
+
+mongoose.set("useFindAndModify", false);
+
+// Midlewarne : fonctions qui va ecouter tout les changements sur les requetes/reponses
+//cors{origin} : 'url autorisée pour accès à l'API'
 app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors());
 app.use("/posts", postsRoutes);
 
 // Se connecter au serveur : port 5500 avec un callback

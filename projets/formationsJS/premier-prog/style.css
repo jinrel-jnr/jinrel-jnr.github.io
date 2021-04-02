@@ -1,0 +1,30 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css";
+
+body {
+  margin: 10px;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+h2 {
+  padding-bottom: 40px;
+}
+h3 {
+  padding-bottom: 0px;
+}
+
+p {
+  padding-bottom: 10px;
+}
+
+ul {
+  padding-left: 40px;
+  padding-bottom: 60px;
+}
+
+li {
+  list-style: georgian;
+}

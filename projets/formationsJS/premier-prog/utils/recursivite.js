@@ -28,7 +28,7 @@ let construc = () => {
   do {
     choix = Number(
       prompt(
-        "Que souhaitez-vous faire ?\n 1. Tester l'itération en récursif\n 5. Quitter"
+        "! RAPPEL : pour observer le résultat, ouvrez votre console.\nQue souhaitez-vous faire ?\n 1. Tester l'itération en récursif\n 5. Quitter"
       )
     );
   } while (!choix || choix > 5 || choix < 0);

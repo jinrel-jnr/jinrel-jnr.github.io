@@ -1,28 +1,30 @@
-let poids = prompt("Quel est votre poids en kg (on triche pas :) ) ?");
-let taille = prompt(
-  "Quel est votre taille (on tr.. vous avez captez ^^ ) ? en cm ou en mètre"
-);
-
-let calculerIMC = (poids, taille) => {
-  poids = Number(poids);
-  let result = poids / Math.pow(conversionTaille(taille), 2);
-  return (result = Math.round(result * 10) / 10);
-};
-
-let conversionTaille = (taille) => {
-  taille = Number(taille);
+let conversion = (taille) => {
   if (taille > 10) {
-    let result = taille / 100;
-    return result;
+    taille /= 100;
   }
   return taille;
 };
 
-alert(
-  "Pour " +
-    poids +
-    "kg et " +
-    conversionTaille(taille) +
-    " mètre. Votre IMC est de : " +
-    calculerIMC(poids, taille)
-);
+let calculerIMC = (poids, taille) => {
+  let resultat =
+    Math.round((poids / Math.pow(conversion(taille), 2)) * 100) / 100;
+  alert(
+    `Pour ${poids}kg, et ${conversion(
+      taille
+    )}mètre, votre IMC est de ${resultat}`
+  );
+  console.log(resultat);
+};
+
+let calculateur = () => {
+  let poids;
+  let taille;
+  do {
+    poids = Number(prompt("Quel est votre poid en kg ?"));
+  } while (!poids || poids > 400);
+
+  do {
+    taille = Number(prompt("Quel est votre taille ? (en cm ou en mètre"));
+  } while (!taille || taille > 250);
+  calculerIMC(poids, taille);
+};

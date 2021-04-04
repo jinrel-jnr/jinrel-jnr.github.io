@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: yellowgreen;
+  font-family: sans-serif;
+  transition: all 0.5s ease;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content-first h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.content-first p {
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content-second h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.bg-color1 {
+  background-color: white;
+}
+.bg-color2 {
+  background-color: cadetblue;
+}
+.bg-color3 {
+  background-color: rgb(143, 20, 20);
+}

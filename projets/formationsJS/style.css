@@ -1,0 +1,19 @@
+body {
+  margin: 20;
+  padding: 20;
+  display: inline-block;
+}
+
+body h1 {
+  text-align: center;
+  line-height: 2em;
+}
+
+#bodyContent {
+  line-height: 10em;
+  text-align: center;
+}
+
+#display {
+  display: none;
+}

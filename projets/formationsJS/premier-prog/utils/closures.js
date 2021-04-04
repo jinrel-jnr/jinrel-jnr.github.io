@@ -6,35 +6,41 @@ monNombre = variable++   <-> (monNombre = variable) puis (variable = variable +1
 */
 
 let go = () => {
-  let unPrix = Number(prompt("Indiquez un prix ?"));
+  let unPrix = Number(
+    prompt(
+      "Combien souhaitez vous ajouter à votre panier ?\nIndiquez un montant :"
+    )
+  );
   return unPrix;
 };
 
 // Déclaration variable totalArticles en dehors de la foncion... :-/
 
 let totalArticles = 0;
+let achat = 0;
 
 function panierOld() {
-  let achat = go();
+  achat = go();
   totalArticles += achat;
-  return totalArticles;
+  return totalArticles, achat;
 }
-
+let resultatPanier = 0;
 console.log(
   "Première version avec la déclaration hors de la fonction :\n" +
-    50 +
-    " + " +
+    "Encours panier : " +
     totalArticles +
-    " = " +
-    panierOld(50)
+    "€ + " +
+    panierOld() +
+    totalArticles +
+    "€ achat. \nMontant total : " +
+    (totalArticles + panierOld())
 );
 console.log(
-  "Première version avec la déclaration hors de la fonction :\n" +
-    60 +
-    " + " +
+  "Première version avec la déclaration hors de la fonction :\nEncours panier : " +
     totalArticles +
-    " = " +
-    panierOld(60)
+    "€ + " +
+    panierOld() +
+    "€ achat."
 );
 
 // Sans la closure : en voulant déclarer dans la fonction, se réinialise à chaque fois
@@ -53,13 +59,21 @@ console.log(
 );
 
 // Avec la closure : variable locale accessible en dehors de la fonction
-function monPanier(achat) {
+function monPanier() {
   let totalArticles = 0;
-  let closurePanier = (achat) => (totalArticles += achat);
+  let achat = go();
+  let closurePanier = () => (totalArticles += achat);
   return closurePanier;
 }
 
 let panier = monPanier();
-console.log(panier(50));
-console.log(panier(40));
-console.log(panier(40));
+console.log(panier());
+console.log(panier());
+console.log(panier());
+
+function constructionMessageLog(uneFonction) {
+  console.log(
+    "Première version avec la déclaration hors de la fonction :\nEncours panier : " +
+      uneFonction
+  );
+}

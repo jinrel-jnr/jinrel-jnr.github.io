@@ -23,6 +23,42 @@
 //   return res;
 // }
 
+let construc = () => {
+  let choix;
+  do {
+    choix = Number(
+      prompt(
+        "! RAPPEL : pour observer le résultat, ouvrez votre console.\nQue souhaitez-vous faire ?\n 1. Tester l'itération en récursif\n 5. Quitter"
+      )
+    );
+  } while (!choix || choix > 5 || choix < 0);
+
+  switch (choix) {
+    case 1:
+      console.log("coucou");
+      lancerIteration();
+      break;
+
+    default:
+      console.log("Au plaisir :)");
+      break;
+  }
+};
+
+let lancerIteration = () => {
+  let fin = Number(prompt("Indiquez une valeur de fin"));
+  let iterations = 0;
+  function boucle() {
+    if (iterations > fin) {
+      console.log("Etapes terminés");
+    } else {
+      console.log("Etape en cours : n°" + iterations);
+      boucle((iterations += 1));
+    }
+  }
+  boucle();
+};
+
 function somme(nombre) {
   if (nombre == 1) {
     return 1;
@@ -30,18 +66,7 @@ function somme(nombre) {
   return nombre + somme(nombre - 1);
 }
 
-console.log(somme(3));
-
-function boucle(iterations) {
-  if (iterations > 10) {
-    console.log("Etapes terminés");
-  } else {
-    console.log("Etape en cours : n°" + iterations);
-    boucle(iterations + 1);
-  }
-}
-
-boucle(1);
+// console.log(somme(3));
 
 function decremente(index) {
   if (index < 0) {
@@ -52,4 +77,4 @@ function decremente(index) {
   }
 }
 
-decremente(10);
+// decremente(10);

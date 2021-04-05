@@ -78,3 +78,26 @@ console.log(unBckUtilisateur);
 
 console.log(typeof utilisateurs + " :  MAP");
 console.log(typeof profilUtilisateurUnique + " : Extrait de MAP");
+
+// Stock collectoin d'objet
+// let voitures = new WeakSet();
+
+let voitureA = {
+  constructeur: "Tesla",
+  modele: "Cybertruck",
+};
+
+let voitureB = {
+  constructeur: "Renault",
+  modele: "Clio",
+};
+
+// alternative au add.
+let voitures = new WeakSet([voitureA, voitureB]);
+voitures.add(voitureA);
+voitures.add(voitureB);
+
+console.log(voitures);
+
+voitures.delete(voitureA);
+console.log(voitures);

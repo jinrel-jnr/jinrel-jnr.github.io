@@ -40,6 +40,7 @@ let monSet = new Set();
 monSet.add("70");
 monSet.add("87");
 monSet.add("2");
+monSet.add("2");
 monSet.delete("70");
 monSet.add(["70", "tableau", "test"]);
 console.log(monSet);

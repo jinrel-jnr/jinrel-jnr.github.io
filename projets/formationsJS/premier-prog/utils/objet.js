@@ -40,7 +40,41 @@ let monSet = new Set();
 monSet.add("70");
 monSet.add("87");
 monSet.add("2");
+monSet.add("2");
 monSet.delete("70");
 monSet.add(["70", "tableau", "test"]);
-console.log(monSet);
-console.log(monSet.size);
+// console.log(monSet);
+// console.log(monSet.size);
+
+// Map : objet permet de stocker des données avec clef/valeur
+// let monMap = new Map([
+//   ["prenom", "Bob"],
+//   ["nom", "Morane"],
+// ]);
+// monMap.set("poste", "L'aventurier");
+// monMap.delete("poste");
+// console.log(monMap);
+
+let utilisateurs = new Map();
+
+utilisateurs.set("Bob Morane", {
+  email: "bob.morane@aventurier.fr",
+  poste: "L'aventurier",
+});
+
+utilisateurs.set("Linus Torvalds", {
+  email: "linu.x@org.git",
+  poste: "Explorateur incroyable",
+});
+
+console.log(utilisateurs.get("Linus Torvalds"));
+let profilUtilisateurUnique = utilisateurs.get("Linus Torvalds");
+profilUtilisateurUnique.email = "nouveau.linux@git.org";
+console.log(profilUtilisateurUnique);
+
+console.log(utilisateurs.has("Linus Torvalds"));
+let unBckUtilisateur = utilisateurs.entries();
+console.log(unBckUtilisateur);
+
+console.log(typeof utilisateurs + " :  MAP");
+console.log(typeof profilUtilisateurUnique + " : Extrait de MAP");

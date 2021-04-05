@@ -32,7 +32,7 @@ let informations = ["superSayen", "34", "femme"];
 let [pseudo, age, sexe] = informations;
 // console.log(pseudo);
 
-// Utilisation de Set : stock uniquement des valeurs uniques dde tout type
+// Utilisation de Set : stock uniquement des valeurs uniques de tout type
 let nombres = [5, 15, 25, 12, 44, 15];
 // let monSet = new Set(nombres);
 let monSet = new Set();

@@ -1,23 +1,40 @@
 let ajouter = (...nombres) => {
   let resultat = 0;
-  nombres.forEach((nb) => {
-    console.log(nb);
-    resultat += nombres[nb];
-  });
+  for (let i = 0; i < nombres.length; i++) {
+    nombres[i].pop();
+    console.log(nombres[i]);
+    for (let j = 0; j < nombres[i].length; j++) {
+      resultat += nombres[i][j];
+    }
+  }
   return resultat;
 };
 let multiplier = (...nombres) => {
-  let resultat = 0;
-  nombres.forEach((nombre) => {
-    resultat *= nombre;
-  });
+  let resultat = 1;
+  for (let i = 0; i < nombres.length; i++) {
+    nombres[i].pop();
+    console.log(nombres[i]);
+    for (let j = 0; j < nombres[i].length; j++) {
+      if (nombres[i][j] != 0) {
+        resultat *= nombres[i][j];
+      }
+    }
+  }
   return resultat;
 };
 let soustraire = (...nombres) => {
-  let resultat = 0;
-  nombres.forEach((nombre) => {
-    resultat -= nombre;
-  });
+  let resultat;
+  for (let i = 0; i < nombres.length; i++) {
+    nombres[i].pop();
+    for (let j = 0; j < nombres[i].length; j++) {
+      if (!resultat) {
+        resultat = nombres[i][j];
+        console.log(resultat);
+      } else {
+        resultat -= nombres[i][j];
+      }
+    }
+  }
   return resultat;
 };
 
@@ -25,10 +42,17 @@ let diviser = (...nombres) => {
   if (nombres == 0) {
     throw new Error(alert("Désolé... Vous ne pouvez pas diviser par 0."));
   } else {
-    nombres.forEach((nombre) => {
-      let resultat = 0;
-      resultat /= nombre;
-    });
+    let resultat;
+    for (let i = 0; i < nombres.length; i++) {
+      nombres[i].pop();
+      for (let j = 0; j < nombres[i].length; j++) {
+        if (!resultat) {
+          resultat = nombres[i][j];
+        } else {
+          resultat /= nombres[i][j];
+        }
+      }
+    }
     return resultat;
   }
 };
@@ -49,8 +73,6 @@ do {
   do {
     nombre = Number(prompt("Indiquez un nombre"));
     nombres.push(nombre);
-    console.log(nombre + " " + typeof nombre);
-    console.log(nombres + " " + typeof nombres);
   } while (nombre != 0 || nombre);
 
   let total = 0;

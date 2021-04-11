@@ -54,7 +54,7 @@ function faireUnChoix() {
   switch (choix) {
     case "1":
       alert(
-        `Le résultat de l'addition pour : | ${afficherNombre(numbers)} est : ` +
+        `Le résultat pour l'addition de : | ${afficherNombre(numbers)} est = ` +
           addition(numbers)
       );
       break;

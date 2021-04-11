@@ -94,6 +94,7 @@ let voitureB = {
 
 // alternative au add.
 let voitures = new WeakSet([voitureA, voitureB]);
+//collection d'objets
 voitures.add(voitureA);
 voitures.add(voitureB);
 
@@ -101,3 +102,19 @@ console.log(voitures);
 
 voitures.delete(voitureA);
 console.log(voitures);
+console.log(voitures.voitureA);
+
+// WeakMap : prend une clé + valeur Objet
+let livres = new WeakMap();
+
+let index = {
+  id: 1,
+};
+
+let livreA = {
+  titre: "L'alchimie expliquée par son langage",
+  auteur: "Léon Gineste",
+};
+
+livres.set(index, livreA);
+console.log(livres);

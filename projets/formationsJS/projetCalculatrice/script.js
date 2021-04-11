@@ -1,19 +1,35 @@
-let ajouter = (nombreA, nombreB) => {
-  return nombreA + nombreB;
+let ajouter = (...nombres) => {
+  let resultat = 0;
+  nombres.forEach((nb) => {
+    console.log(nb);
+    resultat += nombres[nb];
+  });
+  return resultat;
 };
-let multiplier = (nombreA, nombreB) => {
-  //  let resultat = nombreA * nombreB;
-  return nombreA * nombreB;
+let multiplier = (...nombres) => {
+  let resultat = 0;
+  nombres.forEach((nombre) => {
+    resultat *= nombre;
+  });
+  return resultat;
 };
-let soustraire = (nombreA, nombreB) => {
-  return nombreA - nombreB;
+let soustraire = (...nombres) => {
+  let resultat = 0;
+  nombres.forEach((nombre) => {
+    resultat -= nombre;
+  });
+  return resultat;
 };
 
-let diviser = (nombreA, nombreB) => {
-  if (nombreDeux == 0) {
+let diviser = (...nombres) => {
+  if (nombres == 0) {
     throw new Error(alert("Désolé... Vous ne pouvez pas diviser par 0."));
   } else {
-    return nombreA / nombreB;
+    nombres.forEach((nombre) => {
+      let resultat = 0;
+      resultat /= nombre;
+    });
+    return resultat;
   }
 };
 
@@ -28,36 +44,38 @@ do {
     );
   } while (step < 0 || step > 4 || !step);
 
+  let nombres = [];
+  let nombre = 0;
   do {
-    var nombreUn = Number(prompt("Indiquez le premier nombre"));
-  } while (isNaN(nombreUn));
+    nombre = Number(prompt("Indiquez un nombre"));
+    nombres.push(nombre);
+    console.log(nombre + " " + typeof nombre);
+    console.log(nombres + " " + typeof nombres);
+  } while (nombre != 0 || nombre);
 
-  do {
-    var nombreDeux = Number(prompt("Indiquez le deuxième nombre"));
-  } while (!nombreDeux && nombreDeux != 0);
-
-  let resultat;
+  let total = 0;
 
   try {
     switch (step) {
       case 1:
-        resultat = ajouter(nombreUn, nombreDeux);
+        console.log(nombres);
+        total = ajouter(nombres);
         break;
       case 2:
-        resultat = multiplier(nombreUn, nombreDeux);
+        total = multiplier(nombres);
         break;
       case 3:
-        resultat = soustraire(nombreUn, nombreDeux);
+        total = soustraire(nombres);
         break;
       case 4:
-        resultat = diviser(nombreUn, nombreDeux);
+        total = diviser(nombres);
         break;
       default:
         throw new Error(
           "Vous ne pouvez pas choisir une option n'existant pas :)."
         );
     }
-    alert(`Résultat : ${resultat}`);
+    alert(`Résultat : ${total}`);
   } catch (error) {
     alert(error);
   }

@@ -9,6 +9,7 @@ let ajouter = (...nombres) => {
   }
   return resultat;
 };
+
 let multiplier = (...nombres) => {
   let resultat = 1;
   for (let i = 0; i < nombres.length; i++) {
@@ -22,6 +23,7 @@ let multiplier = (...nombres) => {
   }
   return resultat;
 };
+
 let soustraire = (...nombres) => {
   let resultat;
   for (let i = 0; i < nombres.length; i++) {
@@ -72,11 +74,12 @@ do {
   let nombre = 0;
   do {
     nombre = Number(prompt("Indiquez un nombre"));
-    nombres.push(nombre);
+    if (!isNaN(nombre)) {
+      nombres.push(nombre);
+    }
   } while (nombre != 0 || nombre);
 
   let total = 0;
-
   try {
     switch (step) {
       case 1:

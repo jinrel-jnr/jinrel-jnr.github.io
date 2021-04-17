@@ -1,0 +1,34 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: arial;
+  background-color: #ececeb;
+  cursor: default;
+}
+
+header {
+  background-color: #c9d1d3;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.btn {
+  color: blue;
+  cursor: pointer;
+}
+.btn:hover {
+  color: #070649;
+  cursor: pointer;
+}
+.ma_class {
+  background: #e65c00;
+  background: -webkit-linear-gradient(to right, #f9d423, #e65c00);
+  background: linear-gradient(to right, #f9d423, #e65c00);
+}

@@ -31,11 +31,26 @@
     </div>
 
     <div class="container">
+      <h2>Pour information - test de setTimeOut et setInterval</h2>
+      <p>
+        Un pop-up va s'afficher toutes les 2,5 secondes, en boucle.. <br />
+        <strong
+          >Mais pas d'inquiétude, Vous pouvez l'arrêter/relancer quand vous
+          vouler ^^</strong
+        >
+      </p>
+      <button id="stopPopUp">Pour arrêter le pop-up ç'est ici ^^</button>
       <p>
         <a href="#">Supprimer cet article</a>
       </p>
-      <button>Passer au-dessus de moi</button>
+      <button id="buttonBackground">Passer au-dessus de moi</button>
+    </div>
+    <div class="articles">
+      <article style="background-color: silver">
+        <h1 id="propagation" style="display: inline">Titre de l'article</h1>
+      </article>
     </div>
     <script src="events.js"></script>
+    <script src="propagation.js"></script>
   </body>
 </html>

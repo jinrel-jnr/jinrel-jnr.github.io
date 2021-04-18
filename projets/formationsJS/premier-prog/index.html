@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script src="intro.js" defer></script> -->
+    <script src="intro.js" defer></script>
     <!-- <script src="utils/boitesDialogues.js" defer></script> -->
     <!-- <script src="utils/fonctions.js"></script> -->
     <!-- <script src="utils/variablesPortées.js"></script> -->
@@ -249,10 +249,32 @@
             </div>
             <div class="tab">
               <input type="radio" id="rd2" name="rd" />
-              <label class="tab-label" for="rd2">Item 2</label>
+              <label class="tab-label" for="rd2">Le DOM</label>
               <div class="tab-content">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil,
-                aut.
+                Ajouter/ Modifier / Supprimer des données sur le DOM
+                <div class="row">
+                  <div class="col">
+                    <form>
+                      <h4 id="testid">Expérimenter le rendu :</h4>
+                      <input
+                        class="btn1"
+                        id="linkDom"
+                        type="button"
+                        value="Consulter"
+                      />
+                    </form>
+                  </div>
+                  <div class="col">
+                    <h4 id="testid">(Re)Voir la structure :</h4>
+                    <form
+                      action="../le-Dom/dom.js"
+                      method="get"
+                      target="_blank"
+                    >
+                      <input class="btn1" type="submit" value="Voir le code" />
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="tab">

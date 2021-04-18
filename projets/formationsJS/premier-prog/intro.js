@@ -1,3 +1,5 @@
+let linkDom = document.querySelector("#linkDom");
+
 // ETAPE 1 : LES BASES
 // var / let / const
 // Rappel des types de variables :
@@ -44,3 +46,7 @@ if (confirm("Souhaitez-vous confirmer ?")) {
 }
 
 */
+
+linkDom.addEventListener("click", () => {
+  window.open("../le-Dom/index.html", "_blank");
+});

@@ -1,5 +1,5 @@
 let a = document.querySelector("a");
-let button = document.querySelector("button");
+let button = document.querySelector("#buttonBackground");
 let ball = document.querySelector(".ball");
 let around = document.querySelector(".around");
 let body = document.querySelector("body");
@@ -25,7 +25,6 @@ a.addEventListener("click", (event) => {
   if (confirm("Êtes-vous sûr ?")) {
     window.open("http://google.fr", "_blank");
     // location.href = "http://google.fr";
-    target = "_blank";
   }
 });
 
@@ -67,6 +66,7 @@ function modeDark() {
   ball.style.marginLeft = "50px";
   document.querySelector("a").style.color = "pink";
   document.querySelector("h1").style.color = "white";
+  document.querySelector(".container").style.color = "white";
 }
 
 function modeLight() {
@@ -78,6 +78,7 @@ function modeLight() {
   ball.style.marginLeft = "0px";
   document.querySelector("a").style.color = "blue";
   document.querySelector("h1").style.color = "black";
+  document.querySelector(".container").style.color = "black";
 }
 
 a.addEventListener("click", () => {

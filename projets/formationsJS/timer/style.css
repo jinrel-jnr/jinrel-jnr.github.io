@@ -6,3 +6,10 @@ h3 {
 h3:hover {
   color: blueviolet;
 }
+
+.row {
+  display: flex;
+}
+.row .col {
+  flex: 1;
+}

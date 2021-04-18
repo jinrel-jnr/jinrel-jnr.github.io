@@ -10,20 +10,24 @@ document.querySelector(".inputEvent").style.display = "none";
 btn.addEventListener("click", () => {
   btn.innerHTML = "Encore ?";
   count += 1;
-  if (count > 5) {
-    document.getElementById("troll").innerHTML =
-      "Mais tu as fini de spammer le bouton !? :)";
+  console.log(count);
+  if (count > 2) {
+    document.getElementById("troll").innerHTML = "Attention au spam :)";
     btn.innerHTML = "Sûr de recommencer ?";
+    img.classList.toggle("show");
     count += 1;
-    if (count > 6) {
+    console.log(count);
+    if (count > 5) {
       document.getElementById("troll").innerHTML =
-        "En plus tu insistes !! Rooh ! Bon allez zou plus de bouton!";
+        "Tant pis... plus de bouton...";
+      img.classList.toggle("show");
       btn.style.display = "none";
       setTimeout(() => {
         document.getElementById("troll2").innerHTML =
           "Mais tu peux répondre à la question juste en dessous :)";
-        img.classList.toggle("show");
+
         setTimeout(() => {
+          img.classList.toggle("show");
           document.querySelector(".inputEvent").style.display = "block";
         }, 800);
       }, 900);
@@ -84,5 +88,3 @@ theme.forEach((item) => {
     }
   });
 });
-
-// Suite sur les API & AJAX

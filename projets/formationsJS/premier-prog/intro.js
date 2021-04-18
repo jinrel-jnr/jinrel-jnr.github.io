@@ -48,8 +48,21 @@ if (confirm("Souhaitez-vous confirmer ?")) {
 */
 
 linkDom.addEventListener("click", () => {
-  window.open("../le-Dom/index.html", "_blank");
+  window.open("../le-Dom/casPratique/index.html", "_blank");
 });
 linkCalc.addEventListener("click", () => {
   window.open("../projetCalculatrice/index.html", "_blank");
 });
+
+document.body.oncopy = () => {
+  alert("Test de blocage de la copie");
+  return false;
+};
+document.body.oncut = () => {
+  alert("Test de blocage de la copie");
+  return false;
+};
+document.body.onpaste = () => {
+  alert("Test de blocage du 'coller'");
+  return false;
+};

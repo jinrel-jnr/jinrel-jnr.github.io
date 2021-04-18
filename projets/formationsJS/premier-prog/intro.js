@@ -50,3 +50,6 @@ if (confirm("Souhaitez-vous confirmer ?")) {
 linkDom.addEventListener("click", () => {
   window.open("../le-Dom/index.html", "_blank");
 });
+linkCalc.addEventListener("click", () => {
+  window.open("../projetCalculatrice/index.html", "_blank");
+});

@@ -71,19 +71,17 @@ let citations = [
   ],
 ];
 
-console.log(citations[0][1]);
-
 let btn = document.querySelector("#nouveau");
 let citation = document.querySelector("#citation");
 let author = document.querySelector("#auteur");
-let rdm;
+let random;
 let dernier = 0;
 
 let start = () => {
   do {
-    rdm = Math.round(Math.random() * 20);
-  } while (dernier == rdm);
-  chercherCitation(rdm);
+    random = Math.round(Math.random() * 20);
+  } while (dernier == random);
+  chercherCitation(random);
 };
 
 let chercherCitation = (number) => {

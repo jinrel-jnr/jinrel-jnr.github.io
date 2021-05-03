@@ -12,26 +12,6 @@ error.style.display = "none";
 // Etape 3 - Générer un nombre aléatoire
 let nombreAleatoire = Math.floor(Math.random() * 1001);
 
-let verifier = (nombre) => {
-  let instruction = document.createElement("div");
-
-  if (nombre < nombreAleatoire) {
-    instruction.textContent = `#${coups} - ${nombre} : ç'est plus !`;
-    instruction.className = "plus instruction";
-    instruction.id = "instructions";
-  } else if (nombre > nombreAleatoire) {
-    instruction.textContent = `#${coups} - ${nombre} : ç'est moins !`;
-    instruction.className = "moins instruction";
-    instruction.id = "instructions";
-  } else {
-    instruction.textContent = `#${coups} - ${nombre} : Wahou ! gagné ! Félicitations !`;
-    instruction.className = "fini instruction";
-    instruction.id = "instructions";
-    input.disabled = true;
-  }
-  document.querySelector("#instructions").prepend(instruction);
-};
-
 // Etape 4 - Vérifier que l'utilisateur donne bien un nombre
 input.addEventListener("keyup", () => {
   if (isNaN(input.value)) {
@@ -56,3 +36,22 @@ formulaire.addEventListener("submit", (e) => {
 });
 
 // Etape 6 - Créer la fonction vérifier
+let verifier = (nombre) => {
+  let instruction = document.createElement("div");
+
+  if (nombre < nombreAleatoire) {
+    instruction.textContent = `#${coups} - ${nombre} : ç'est plus !`;
+    instruction.className = "plus instruction";
+    instruction.id = "instructions";
+  } else if (nombre > nombreAleatoire) {
+    instruction.textContent = `#${coups} - ${nombre} : ç'est moins !`;
+    instruction.className = "moins instruction";
+    instruction.id = "instructions";
+  } else {
+    instruction.textContent = `#${coups} - ${nombre} : Wahou ! gagné ! Félicitations !`;
+    instruction.className = "fini instruction";
+    instruction.id = "instructions";
+    input.disabled = true;
+  }
+  document.querySelector("#instructions").prepend(instruction);
+};
